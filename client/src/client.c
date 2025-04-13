@@ -83,7 +83,7 @@ t_config* iniciar_config(void)
  leer_consola(t_log* logger)
 {
 	char* leido;
-
+	printf("Ingresa un mensaje para loguear. Enter vacio para terminar","");
     while ((leido = readline("> ")) != NULL && strcmp(leido, "") != 0)
     {
         log_info(logger, leido);
@@ -110,7 +110,7 @@ void paquete(int conexion)
 
 	
 	// Leemos y esta vez agregamos las lineas al paquete
-
+	printf("Ingrese un mensaje para enviar. Enter vacio para terminar","");
     while ((leido = readline("> ")) != NULL && strcmp(leido, "") != 0)
     {
 		agregar_a_paquete(paquete,leido,strlen(leido)+1);
